@@ -18,6 +18,10 @@ def set_dict(target_dict, value, *args):
     target_dict[str_key(*args)] = value
 
 
+def get_dict(target_dict, key):
+    return target_dict.get(str_key(key), 0)
+
+
 def set_prob(P, s, a, s1, p=1.0):  # 设 置 概 率 字 典
     set_dict(P, p, s, a, s1)
 
